@@ -1,0 +1,22 @@
+$max-mob-l: 375px;
+$max-mob-xl: 414px;
+$max-tablet: 767px;
+$max-desktop: 1024px;
+
+@mixin media($point) {
+  @if $point == max-mob-l {
+    @media screen and (max-width: $max-mob-l) { @content; }
+  }
+
+  @else if $point == max-mob-xl {
+    @media screen and (max-width: $max-mob-xl) { @content; }
+  }
+
+  @else if $point == max-tablet {
+    @media screen and (max-width: $max-tablet) { @content; }
+  }
+
+  @else if $point == max-desktop {
+    @media screen and (max-width: $max-desktop) { @content; }
+  }
+}
